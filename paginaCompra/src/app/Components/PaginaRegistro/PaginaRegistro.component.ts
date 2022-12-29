@@ -19,6 +19,8 @@ export class PaginaRegistroComponent implements OnInit {
 
   }
   NAV(){
+    console.log(this.nombre)
+    console.log(this.correo)
     if (this.nombre='marco'&&this.correo=='pmarco@gmail.com') {      
     this.router.navigate(['3'])
     }
