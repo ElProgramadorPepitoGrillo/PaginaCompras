@@ -1,12 +1,13 @@
-<div class="container text-left mt-5">
-  <div class="row">
-    <div class="col-sm-6" style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">
+<div class="col-sm-12">
+  <div class="row"
+    style="background-image: url(https://i.pinimg.com/564x/79/f7/35/79f735bdc978bb91c3459899cad1a99a.jpg) ; background-repeat: no-repeat;">
+    <div class="col-sm-9" style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">
       Paquito Store :D
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-3">
       <div class="container text-left ">
-        <div class="row">
+        <div class="row mt-5">
           <div class="col-sm-6">
             HOME
           </div>
@@ -17,16 +18,61 @@
             <button type="button" class="btn btn-primary" (click)="nav()">Salir</button>
           </div>
           <div class="col-sm-6">
-            <button type="button" class="btn btn-primary">Comprar</button>
+            <button type="button" class="btn btn-primary" (click)="nav2()">Comprar</button>
 
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-sm-12" style="font-family: 'Times New Roman', Times, serif; font-size: small; background-color: aqua;">
-      wad
-    </div>
+
+
 
   </div>
+  <div class="col-sm-12 mt-4" style=" font-size: small"
+    style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 50px;">
+    Productos
+  </div>
+  <div class="col-sm-12" style="text-align: center;">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col-sm-12"> Imagen</div>
+          <div class="col-sm-2"><button>Mas</button></div>
+          <div class="col-sm-8"><input type="number"></div>
+          <div class="col-sm-2"><button>Menos</button></div>
+
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col-sm-12"> Imagen</div>
+          <div class="col-sm-2">
+            <button (click)="cantidad=cantidad+1" (click)="sumar( 45,'Producto1')">Mas</button>
+          </div>
+          <div class="col-sm-8">
+            <input type="number" [(ngModel)]="cantidad" style="text-align: center;">
+            {{total}}
+          </div>
+          <div class="col-sm-2"><button (click)="cantidad=cantidad-1" (click)="restar(  45,'Producto1')">Menos</button></div>
+          <div class="col-sm-12 mt-2" ><button (click)="comprar( 45,'Producto1')">COMPRAR</button></div>
+
+        </div>
+      </div>
+      <div class="col-sm-4">
+        Producto 3
+      </div>
+
+      <div class="col-sm-6">
+        Producto 4
+      </div>
+      <div class="col-sm-6">
+        Producto 5
+      </div>
+
+    </div>
+
+
+  </div>
+
 </div>
