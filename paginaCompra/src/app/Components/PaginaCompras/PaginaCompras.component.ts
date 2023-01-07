@@ -30,7 +30,7 @@ export class PaginaComprasComponent implements OnInit {
   total7:number
   total8:number
 
-  carro:Number  
+  carro:any  
   
 
   
@@ -65,16 +65,16 @@ export class PaginaComprasComponent implements OnInit {
   }
 
   clacula() {
-    let total=0;
+    this.carro=0;
     for (const key in localStorage) {
       if (key.startsWith("Producto")) {
         let valor=localStorage[key];
         valor=valor.substring(1);
-        total = total +  (+valor);
+        this.carro = this.carro +  (+valor);//Convertir a number
         console.log(key, "Dato", valor);
       }
     }
-    console.log(total);
+    console.log(this.carro);
   }
 
 
