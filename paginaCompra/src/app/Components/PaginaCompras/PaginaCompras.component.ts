@@ -10,19 +10,24 @@ export class PaginaComprasComponent implements OnInit {
 
   constructor(private router:Router) { }
 
-
+  
   cantidad:number=0
   cantidad2:number=0
   cantidad3:number=0
   cantidad4:number=0
   cantidad5:number=0
   cantidad6:number=0
+  cantidad7:number=0
+  cantidad8:number=0
+  
   total:number
   total2:number
   total3:number
   total4:number
   total5:number
   total6:number
+  total7:number
+  total8:number
 
   
 
@@ -54,6 +59,7 @@ export class PaginaComprasComponent implements OnInit {
     tot=cant*precio
     localStorage.setItem(nombreproducto,'$'+tot.toString()+'.00')
   }
+  
 
 
   
