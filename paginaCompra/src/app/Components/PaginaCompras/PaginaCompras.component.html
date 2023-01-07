@@ -1,166 +1,194 @@
 <div class="col-sm-12">
-  <div class="row"
-    style="background-image: url(https://i.pinimg.com/564x/79/f7/35/79f735bdc978bb91c3459899cad1a99a.jpg) ; background-repeat: no-repeat; background-size: 100%;">
-    <div class="col-sm-8" style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">
-      Paquito Store :D
-    </div>
-    <div class="col-sm-4 s">
-      <div class="container text-left ">
-        <div class="row mt-5">
-          <div class="col-sm-6">
-            HOME
-          </div>
-          <div class="col-sm-6">
-            CANTIDAD:
-          </div>
-          <div class="col-sm-6">
-            <button type="button" class="btn btn-primary" (click)="nav()">Salir</button>
-          </div>
-          <div class="col-sm-6">
-            <button type="button" class="btn btn-primary" (click)="nav2()">Comprar</button>
-            <br><br>
+  <header>
+    <div class="row"
+      style="background-image: url(https://i.pinimg.com/564x/79/f7/35/79f735bdc978bb91c3459899cad1a99a.jpg) ; background-repeat: no-repeat; background-size: 100%;">
+      <div class="col-sm-6" style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">
+        Paquito Store :D
+      </div>
+      <div class="col-sm-6">
+        <div class="container text-left ">
+          <div class="col-sm-12">
+          <div class="row mt-5">
+            <div class="col-sm-3">
+              HOME
+            </div>
+            <div class="col-sm-3">
+              CANTIDAD:{{carro}}
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-primary" (click)="nav()">Salir</button>
+            </div>
+            <div class="col-sm-3">
+              <button type="button" class="btn btn-primary" (click)="nav2()">Comprar</button>
+              <br><br>
 
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-
-
-
-  </div>
-  <div class="col-sm-12 mt-4" style=" font-size: small"
-    style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 50px;">
-    Productos
-  </div>
-  <div class="col-sm-12" style="text-align: center;">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2">
-            <button class="btn btn-success" (click)="cantidad=cantidad+1"
-              (click)="sumar( 45,'Producto1',cantidad,total)">Mas</button>
-          </div>
-          <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad" style="text-align: center;">
-            {{total}}
-          </div>
-          <div class="col-sm-2"><button (click)="cantidad=cantidad-1" class="btn btn-danger"
-              (click)="restar(  45,'Producto1',cantidad,total)">Menos</button></div>
-          <div class="col-sm-12 mt-2"><button (click)="comprar( 45,'Producto1',cantidad,total)">COMPRAR</button></div>
-
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2">
-            <button class="btn btn-success" (click)="cantidad2=cantidad2+1"
-              (click)="sumar( 15,'Producto2',cantidad2,total2)">Mas</button>
-          </div>
-          <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad2" style="text-align: center;">
-            {{total2}}
-          </div>
-          <div class="col-sm-2"><button (click)="cantidad2=cantidad2-1" class="btn btn-danger"
-              (click)="restar(  15,'Producto2',cantidad2,total2)">Menos</button></div>
-          <div class="col-sm-12 mt-2"><button (click)="comprar( 15,'Producto2',cantidad2,total2)">COMPRAR</button></div>
-
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="row">
-          <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2">
-            <button class="btn btn-success" (click)="cantidad3=cantidad3+1"
-              (click)="sumar( 12,'Producto3',cantidad3,total3)">Mas</button>
-          </div>
-          <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad3" style="text-align: center;">
-            {{total2}}
-          </div>
-          <div class="col-sm-2"><button (click)="cantidad3=cantidad3-1" class="btn btn-danger"
-              (click)="restar(  12,'Producto3',cantidad3,total3)">Menos</button></div>
-          <div class="col-sm-12 mt-2"><button (click)="comprar( 12,'Producto3',cantidad3,total3)">COMPRAR</button></div>
-
         </div>
       </div>
 
-      <div class="col-sm-6 mt-4">
-        <div class="row">
-          <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2">
-            <button class="btn btn-success" (click)="cantidad4=cantidad4+1"
-              (click)="sumar( 20,'Producto4',cantidad4,total4)">Mas</button>
-          </div>
-          <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad4" style="text-align: center;">
-            {{total2}}
-          </div>
-          <div class="col-sm-2"><button (click)="cantidad4=cantidad4-1" class="btn btn-danger"
-              (click)="restar(  20,'Producto4',cantidad4,total4)">Menos</button></div>
-          <div class="col-sm-12 mt-2"><button (click)="comprar( 20,'Producto4',cantidad4,total4)">COMPRAR</button></div>
 
-        </div>
-      </div>
-      <div class="col-sm-6 mt-4">
-        <div class="row">
-          <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2">
-            <button class="btn btn-success" (click)="cantidad5=cantidad5+1"
-              (click)="sumar( 30,'Producto5',cantidad5,total5)">Mas</button>
-          </div>
-          <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad5" style="text-align: center;">
-          </div>
-          <div class="col-sm-2"><button (click)="cantidad5=cantidad5-1" class="btn btn-danger"
-              (click)="restar(  30,'Producto5',cantidad5,total5)">Menos</button></div>
-          <div class="col-sm-12 mt-2"><button (click)="comprar( 30,'Producto5',cantidad5,total5)">COMPRAR</button></div>
-        </div>
-      </div>
 
-      <div class="col-sm-4 mt-4">
-        <div class="row">
-          <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2">
-            <button class="btn btn-success" (click)="cantidad6=cantidad6+1"
-              (click)="sumar( 5,'Producto6',cantidad6,total6)">Mas</button>
-          </div>
-          <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad6" style="text-align: center;">
-          </div>
-          <div class="col-sm-2"><button (click)="cantidad6=cantidad6-1" class="btn btn-danger"
-              (click)="restar(  5,'Producto6',cantidad6,total6)">Menos</button></div>
-          <div class="col-sm-12 mt-2"><button (click)="comprar( 5,'Producto6',cantidad6,total6)">COMPRAR</button></div>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-4">
-        <div class="row">
-          <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2">
-            <button class="btn btn-success" (click)="cantidad7=cantidad7+1"
-              (click)="sumar( 27,'Producto7',cantidad7,total7)">Mas</button>
-          </div>
-          <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad7" style="text-align: center;">
-          </div>
-          <div class="col-sm-2"><button (click)="cantidad7=cantidad7-1" class="btn btn-danger"
-              (click)="restar(  27,'Producto7',cantidad7,total7)">Menos</button></div>
-          <div class="col-sm-12 mt-2"><button (click)="comprar( 27,'Producto7',cantidad7,total7)">COMPRAR</button></div>
-        </div>
-      </div>
-
-    <div class="col-sm-4 mt-4">
-      POLA
 
     </div>
+  </header>
+
+  <body>
+    <div class="col-sm-12 mt-4" style=" font-size: small"
+      style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 50px;">
+      Productos
+    </div>
+
+    <div class="col-sm-12" style="text-align: center;">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad=cantidad+1"
+                (click)="sumar( 45,'Producto1',cantidad,total)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad" style="text-align: center;">
+              {{total}}
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad=cantidad-1" class="btn btn-outline-danger"
+                (click)="restar(  45,'Producto1',cantidad,total)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 45,'Producto1',cantidad,total)">COMPRAR</button></div>
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad2=cantidad2+1"
+                (click)="sumar( 15,'Producto2',cantidad2,total2)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad2" style="text-align: center;">
+              {{total2}}
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad2=cantidad2-1" class="btn btn-outline-danger"
+                (click)="restar(  15,'Producto2',cantidad2,total2)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 15,'Producto2',cantidad2,total2)">COMPRAR</button></div>
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad3=cantidad3+1"
+                (click)="sumar( 12,'Producto3',cantidad3,total3)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad3" style="text-align: center;">
+              {{total2}}
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad3=cantidad3-1" class="btn btn-outline-danger"
+                (click)="restar(  12,'Producto3',cantidad3,total3)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 12,'Producto3',cantidad3,total3)">COMPRAR</button></div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 mt-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad4=cantidad4+1"
+                (click)="sumar( 20,'Producto4',cantidad4,total4)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad4" style="text-align: center;">
+              {{total2}}
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad4=cantidad4-1" class="btn btn-outline-danger"
+                (click)="restar(  20,'Producto4',cantidad4,total4)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 20,'Producto4',cantidad4,total4)">COMPRAR</button></div>
+
+          </div>
+        </div>
+        <div class="col-sm-6 mt-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad5=cantidad5+1"
+                (click)="sumar( 30,'Producto5',cantidad5,total5)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad5" style="text-align: center;">
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad5=cantidad5-1" class="btn btn-outline-danger"
+                (click)="restar(  30,'Producto5',cantidad5,total5)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 30,'Producto5',cantidad5,total5)">COMPRAR</button></div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mt-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad6=cantidad6+1"
+                (click)="sumar( 5,'Producto6',cantidad6,total6)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad6" style="text-align: center;">
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad6=cantidad6-1" class="btn btn-outline-danger"
+                (click)="restar(  5,'Producto6',cantidad6,total6)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 5,'Producto6',cantidad6,total6)">COMPRAR</button></div>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad7=cantidad7+1"
+                (click)="sumar( 27,'Producto7',cantidad7,total7)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad7" style="text-align: center;">
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad7=cantidad7-1" class="btn btn-outline-danger"
+                (click)="restar(  27,'Producto7',cantidad7,total7)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 27,'Producto7',cantidad7,total7)">COMPRAR</button></div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mt-4">
+          <div class="row">
+            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-2">
+              <button class="btn btn-outline-success" (click)="cantidad8=cantidad8+1"
+                (click)="sumar( 1,'Producto8',cantidad8,total8)">Mas</button>
+            </div>
+            <div class="col-sm-8">
+              <input type="number" [(ngModel)]="cantidad8" style="text-align: center;">
+            </div>
+            <div class="col-sm-2"><button (click)="cantidad8=cantidad8-1" class="btn btn-outline-danger"
+                (click)="restar(  1,'Producto8',cantidad8,total8)">Menos</button></div>
+            <div class="d-grid gap-2 col-6 mx-auto"><button
+                (click)="comprar( 1,'Producto8',cantidad8,total8)">COMPRAR</button></div>
+          </div>
+        </div>
 
 
 
-  </div>
+
+      </div>
 
 
-</div>
+    </div>
+  </body>
 
 </div>

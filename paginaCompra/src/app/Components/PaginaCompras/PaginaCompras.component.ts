@@ -1,3 +1,4 @@
+import { NgForOf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -29,10 +30,12 @@ export class PaginaComprasComponent implements OnInit {
   total7:number
   total8:number
 
+  carro:Number  
   
 
   
   ngOnInit() {
+    this.clacula()
   }
 
 
@@ -46,20 +49,34 @@ export class PaginaComprasComponent implements OnInit {
   
   sumar(precio:number,nombreproducto:string,cant:number,tot:number){
     tot=cant*precio
-    console.log(this.total); 
-    console.log(this.cantidad);
+    this.clacula()
     
   }
   restar(precio:number,nombreproducto:string,cant:number,tot:number){
     tot=cant*precio
     console.log(tot); 
     console.log(cant);    
+    this.clacula()
   }
   comprar(precio:number, nombreproducto:string,cant:number,tot:number){    
     tot=cant*precio
     localStorage.setItem(nombreproducto,'$'+tot.toString()+'.00')
+    this.clacula()
   }
-  
+
+  clacula() {
+    let total=0;
+    for (const key in localStorage) {
+      if (key.startsWith("Producto")) {
+        let valor=localStorage[key];
+        valor=valor.substring(1);
+        total = total +  (+valor);
+        console.log(key, "Dato", valor);
+      }
+    }
+    console.log(total);
+  }
+
 
 
   
