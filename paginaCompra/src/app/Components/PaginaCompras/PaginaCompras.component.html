@@ -38,9 +38,16 @@
       <div class="col-sm-4">
         <div class="row">
           <div class="col-sm-12"> Imagen</div>
-          <div class="col-sm-2"><button>Mas</button></div>
-          <div class="col-sm-8"><input type="number"></div>
-          <div class="col-sm-2"><button>Menos</button></div>
+          <div class="col-sm-2">
+            <button class="btn btn-success" (click)="cantidad=cantidad+1" (click)="sumar( 45,'Producto1',cantidad,total)">Mas</button>
+          </div>
+          <div class="col-sm-8">
+            <input type="number" [(ngModel)]="cantidad" style="text-align: center;">
+            {{total}}
+          </div>
+          <div class="col-sm-2"><button (click)="cantidad=cantidad-1"
+              class="btn btn-danger" (click)="restar(  45,'Producto1',cantidad,total)">Menos</button></div>
+          <div class="col-sm-12 mt-2"><button (click)="comprar( 45,'Producto1',cantidad,total)">COMPRAR</button></div>
 
         </div>
       </div>
@@ -48,25 +55,39 @@
         <div class="row">
           <div class="col-sm-12"> Imagen</div>
           <div class="col-sm-2">
-            <button (click)="cantidad=cantidad+1" (click)="sumar( 45,'Producto1')">Mas</button>
+            <button class="btn btn-success" (click)="cantidad2=cantidad2+1" (click)="sumar( 15,'Producto2',cantidad2,total2)">Mas</button>
           </div>
           <div class="col-sm-8">
-            <input type="number" [(ngModel)]="cantidad" style="text-align: center;">
-            {{total}}
+            <input type="number" [(ngModel)]="cantidad2" style="text-align: center;">
+            {{total2}}
           </div>
-          <div class="col-sm-2"><button (click)="cantidad=cantidad-1" (click)="restar(  45,'Producto1')">Menos</button></div>
-          <div class="col-sm-12 mt-2" ><button (click)="comprar( 45,'Producto1')">COMPRAR</button></div>
+          <div class="col-sm-2"><button (click)="cantidad2=cantidad2-1"
+            class="btn btn-danger"(click)="restar(  45,'Producto1',cantidad2,total2)">Menos</button></div>
+          <div class="col-sm-12 mt-2"><button (click)="comprar( 15,'Producto2',cantidad2,total2)">COMPRAR</button></div>
 
         </div>
       </div>
       <div class="col-sm-4">
-        Producto 3
+        <div class="row">
+          <div class="col-sm-12"> Imagen</div>
+          <div class="col-sm-2">
+            <button class="btn btn-success" (click)="cantidad3=cantidad3+1" (click)="sumar( 12,'Producto3',cantidad3,total3)">Mas</button>
+          </div>
+          <div class="col-sm-8">
+            <input type="number" [(ngModel)]="cantidad3" style="text-align: center;">
+            {{total2}}
+          </div>
+          <div class="col-sm-2"><button (click)="cantidad3=cantidad3-1"
+            class="btn btn-danger"(click)="restar(  45,'Producto1',cantidad3,total3)">Menos</button></div>
+          <div class="col-sm-12 mt-2"><button (click)="comprar( 12,'Producto3',cantidad3,total3)">COMPRAR</button></div>
+
+        </div>
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-6 mt-4">
         Producto 4
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 mt-4">
         Producto 5
       </div>
 
