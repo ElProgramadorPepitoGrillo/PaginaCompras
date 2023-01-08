@@ -14,12 +14,10 @@ body {
 }
 
 .contenedor {
-  width: 250px;
+  
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  align-self: center;
+  justify-content: center;
   
 }
 
