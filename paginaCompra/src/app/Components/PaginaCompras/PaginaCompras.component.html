@@ -1,9 +1,9 @@
 <div class="col-sm-12">
   <header>
     <div class="row"
-      style="background-image: url(https://media.istockphoto.com/id/1136322848/es/vector/vector-negro-dise%C3%B1o-de-fondo-geom%C3%A9trico-fondo-geom%C3%A9trico-horizontal-cabecera-pie-de-pagina.jpg?s=612x612&w=0&k=20&c=Tnl6xYhxAiypNMegAoq8zHyXTEGBFos7hMB9pDIdiS0=) ; background-repeat: no-repeat; background-size: 100%;">
+      style="background-image: url(assets/Imagenes/cabecera.jpg) ; background-repeat: no-repeat; background-size: 100%;">
       <div class="col-sm-6" style="font-family: 'Times New Roman', Times, serif; font-size: 50px;color: aliceblue;">
-        Paquito Store :D
+        Paquito´s Store :D
       </div>
       <div class="col-sm-6" style="color: aliceblue;">
         <div class="container text-left ">
@@ -13,7 +13,7 @@
                 HOME
               </div>
               <div class="col-sm-3">
-                CANTIDAD:{{carro}}
+                TOTAL:${{carro}}
               </div>
               <div class="col-sm-3">
                 <button type="button" class="btn btn-primary" (click)="nav()">Salir</button>
@@ -47,14 +47,13 @@
             <div class="col-sm-12 ">
               <div class="contenedor">
                 <figure>
-                  <img
-                    src="https://sites.google.com/site/computadoraavi/_/rsrc/1472255688348/mause/descarga%20%281%29.jpg"
-                    alt="" class="imagen">
+                  <img src="assets/Imagenes/mause.jpg" alt=""
+                    class="imagen">
                   <div class="capa">
-                    <H5>VALOR: 20$</H5>
+                    <H5>VALOR: 375$</H5>
                     <P>
                       Mause alambrico
-                      <br>de 2000 dpi ideal para
+                      <br>de 37500 dpi ideal para
                       <br>jugar algo
                     </P>
                   </div>
@@ -62,19 +61,20 @@
 
                 </figure>
               </div>
+              Precio: 375$
             </div>
             <div class="col-sm-2">
               <button class="btn btn-outline-success" (click)="cantidad=cantidad+1"
-                (click)="sumar( 20,'Producto1',cantidad,total)">Mas</button>
+                (click)="sumar( 375,'Producto1',cantidad,total)">Mas</button>
             </div>
             <div class="col-sm-8">
               <input type="number" [(ngModel)]="cantidad" style="text-align: center;">
               {{total}}
             </div>
             <div class="col-sm-2"><button (click)="cantidad=cantidad-1" class="btn btn-outline-danger"
-                (click)="restar(  20,'Producto1',cantidad,total)">Menos</button></div>
+                (click)="restar(  375,'Producto1',cantidad,total)">Menos</button></div>
             <div class="d-grid gap-2 col-6 mx-auto"><button
-                (click)="comprar( 20,'Producto1',cantidad,total)">AÑADIR</button></div>
+                (click)="comprar( 375,'Producto1',cantidad,total)">AÑADIR</button></div>
 
           </div>
         </div>
@@ -83,14 +83,13 @@
             <div class="col-sm-12">
               <div class="contenedor">
                 <figure>
-                  <img
-                    src="https://m.media-amazon.com/images/I/71feD0H6VTL._AC_SY355_.jpg"
-                    alt="" class="imagen">
+                  <img src="https://m.media-amazon.com/images/I/71feD0H6VTL._AC_SY355_.jpg" alt="" class="imagen">
                   <div class="capa">
-                    <H5>VALOR: 15$</H5>
+                    <H5>Teclado de Membrana</H5>
                     <P>
-                      Teclado de Membrana
-                      <br> 
+                      60% Teclado para Juegos con Teclas de Membrana Profesional, Mini Compacto 62 Teclas,
+                      <br>USB Cable Teclado Gaming, RGB.
+                      <br>
                       <br>
                     </P>
                   </div>
@@ -98,6 +97,7 @@
 
                 </figure>
               </div>
+              Precio: 15$
             </div>
             <div class="col-sm-2">
               <button class="btn btn-outline-success" (click)="cantidad2=cantidad2+1"
@@ -116,7 +116,25 @@
         </div>
         <div class="col-sm-4">
           <div class="row">
-            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-12">
+              <div class="col-sm-12">
+                <div class="contenedor">
+                  <figure>
+                    <img
+                      src="https://ae01.alicdn.com/kf/H8f2d8be28f1a48fa9e011a79cb73fa64Z/USB-2-0-de-SanDisk-Pen-Drive-32gb-CZ61-disco-Flash-USB-Flash-Pendrive-64gb-128gb.jpg"
+                      alt="" class="imagen">
+                    <div class="capa">
+                      <H5>Memorua USB 132GB</H5>
+                      <P>USB 2,0 de SanDisk Pen Drive 132gb CZ61 disco Flash USB Flash Pendrive 
+                      </P>
+                    </div>
+
+
+                  </figure>
+                </div>
+                Precio: 12$
+              </div>
+            </div>
             <div class="col-sm-2">
               <button class="btn btn-outline-success" (click)="cantidad3=cantidad3+1"
                 (click)="sumar( 12,'Producto3',cantidad3,total3)">Mas</button>
@@ -135,42 +153,85 @@
 
         <div class="col-sm-6 mt-4">
           <div class="row">
-            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-12">
+              <div class="contenedor">
+                <figure>
+                  <img src="https://www.idcmayoristas.com/wp-content/uploads/2021/04/PROCESADOR-INTEL-CORE-I7-11700.png" alt="" class="imagen">
+                  <div class="capa">
+                    <H5>CORE I7</H5>
+                    <P>PROCESADOR INTEL CORE I7 11700 (11VA) *CON VIDEO* MAX 4.90 GHz 16MB FC-LGA14A - BX8070811700 99AFTZ
+                    </P>
+                  </div>
+
+
+                </figure>
+              </div>
+              Precio: 375$
+            </div>
             <div class="col-sm-2">
               <button class="btn btn-outline-success" (click)="cantidad4=cantidad4+1"
-                (click)="sumar( 20,'Producto4',cantidad4,total4)">Mas</button>
+                (click)="sumar( 375,'Producto4',cantidad4,total4)">Mas</button>
             </div>
             <div class="col-sm-8">
               <input type="number" [(ngModel)]="cantidad4" style="text-align: center;">
               {{total2}}
             </div>
             <div class="col-sm-2"><button (click)="cantidad4=cantidad4-1" class="btn btn-outline-danger"
-                (click)="restar(  20,'Producto4',cantidad4,total4)">Menos</button></div>
+                (click)="restar(  375,'Producto4',cantidad4,total4)">Menos</button></div>
             <div class="d-grid gap-2 col-6 mx-auto"><button
-                (click)="comprar( 20,'Producto4',cantidad4,total4)">AÑADIR</button></div>
+                (click)="comprar( 375,'Producto4',cantidad4,total4)">AÑADIR</button></div>
 
           </div>
         </div>
         <div class="col-sm-6 mt-4">
           <div class="row">
-            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-12">
+              
+              <div class="contenedor">
+                <figure>
+                  <img src="assets/Imagenes/case.jpg" alt="" class="imagen">
+                  <div class="capa">
+                    <H5>CASE</H5>
+                    <P>Panel frontal de malla juego ATX Caso Blanco Caja del ordenador, PC componentes del equipo</P>
+                  </div>
+
+
+                </figure>
+              </div>
+              Precio: 112$
+            </div>
             <div class="col-sm-2">
               <button class="btn btn-outline-success" (click)="cantidad5=cantidad5+1"
-                (click)="sumar( 30,'Producto5',cantidad5,total5)">Mas</button>
+                (click)="sumar( 112,'Producto5',cantidad5,total5)">Mas</button>
             </div>
             <div class="col-sm-8">
               <input type="number" [(ngModel)]="cantidad5" style="text-align: center;">
             </div>
             <div class="col-sm-2"><button (click)="cantidad5=cantidad5-1" class="btn btn-outline-danger"
-                (click)="restar(  30,'Producto5',cantidad5,total5)">Menos</button></div>
+                (click)="restar(  112,'Producto5',cantidad5,total5)">Menos</button></div>
             <div class="d-grid gap-2 col-6 mx-auto"><button
-                (click)="comprar( 30,'Producto5',cantidad5,total5)">AÑADIR</button></div>
+                (click)="comprar( 112,'Producto5',cantidad5,total5)">AÑADIR</button></div>
           </div>
         </div>
 
         <div class="col-sm-4 mt-4">
           <div class="row">
-            <div class="col-sm-12"> Imagen</div>
+            <div class="col-sm-12"> 
+              
+              
+              <div class="contenedor">
+                <figure>
+                  <img src="assets/Imagenes/headsets.jpg" alt="" class="imagen">
+                  <div class="capa">
+                    <H5>Auriculares</H5>
+                    <P>auriculares con cable, auriculares para juegos con emisión de luz RGB PS4</P>
+                   </div>
+
+
+                </figure>
+              </div>
+              Precio: 229$
+            </div>
             <div class="col-sm-2">
               <button class="btn btn-outline-success" (click)="cantidad6=cantidad6+1"
                 (click)="sumar( 5,'Producto6',cantidad6,total6)">Mas</button>
