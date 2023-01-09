@@ -10,7 +10,7 @@
           <div class="col-sm-12">
             <div class="row mt-5">
               <div class="col-sm-3">
-                HOME
+                <button type="button" class="btn btn-primary" (click)="limpiar()">Limpiar</button>
               </div>
               <div class="col-sm-3">
                 TOTAL:${{carro}}
@@ -19,7 +19,9 @@
                 <button type="button" class="btn btn-primary" (click)="nav()">Salir</button>
               </div>
               <div class="col-sm-3">
-                <button type="button" class="btn btn-primary" (click)="nav2()">Comprar</button>
+                <button type="button" class="btn btn-primary" (click)="nav2()">Comprar
+                  <img src="assets/Imagenes/carrito.png" alt="" class="carro">
+                </button>
                 <br><br>
 
               </div>

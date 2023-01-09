@@ -42,6 +42,7 @@ export class PaginaComprasComponent implements OnInit {
 
   nav(){
     this.router.navigate([''])
+    this.limpiar()
   }
   nav2(){
     this.router.navigate(['4'])
@@ -60,6 +61,9 @@ export class PaginaComprasComponent implements OnInit {
     tot=cant*precio
     localStorage.setItem(nombreproducto,tot.toString()+ '#'+ cant.toString()+'#'+precio.toString())
     this.clacula()
+  }
+  limpiar(){
+    localStorage.clear();
   }
 
   clacula() {

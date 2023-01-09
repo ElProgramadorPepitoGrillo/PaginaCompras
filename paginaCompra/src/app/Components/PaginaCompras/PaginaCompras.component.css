@@ -5,7 +5,10 @@ body {
   padding-top: 20px;
 }
 
-
+.carro{
+  width: 30px;
+  height: 30px;
+}
 
 .btn-primary {
   background-color: #6344d165 !important;
