@@ -53,14 +53,12 @@ export class PaginaComprasComponent implements OnInit {
     
   }
   restar(precio:number,nombreproducto:string,cant:number,tot:number){
-    tot=cant*precio
-    console.log(tot); 
-    console.log(cant);    
+    tot=cant*precio   
     this.clacula()
   }
   comprar(precio:number, nombreproducto:string,cant:number,tot:number){    
     tot=cant*precio
-    localStorage.setItem(nombreproducto,'$'+tot.toString()+'.00')
+    localStorage.setItem(nombreproducto,tot.toString()+ '#'+ cant.toString()+'#'+precio.toString())
     this.clacula()
   }
 
@@ -69,9 +67,14 @@ export class PaginaComprasComponent implements OnInit {
     for (const key in localStorage) {
       if (key.startsWith("Producto")) {
         let valor=localStorage[key];
-        valor=valor.substring(1);
-        this.carro = this.carro +  (+valor);//Convertir a number
         console.log(key, "Dato", valor);
+        let partes=valor.split('#');//separar el valor del key en arrays con el metodo split y un #
+        console.log(partes);
+        let l_total='0';
+        if (partes.length==3){
+          l_total=partes[0];
+        }
+        this.carro = this.carro +  (+l_total);//Convertir a number
       }
     }
     console.log(this.carro);

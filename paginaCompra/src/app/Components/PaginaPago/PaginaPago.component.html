@@ -1,2 +1,48 @@
+<header>
+
+</header>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12"
+                style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 50px;">
+                Carrito</div>
+            <div class="col-3">Imagen del producto
+                <br>
+                <div class="contenedor" *ngFor="">
 
 
+                </div>
+            </div>
+            <div class="col-2">Descripcion
+                <br>
+                <div *ngFor="let descripcion of descripciones">
+                    <ul>{{descripcion}}</ul>
+                </div>
+            </div>
+            <div class="col-2">Precios
+                <br>
+                <div *ngFor="let precio of precios">
+                    <ul>{{precio}}</ul>
+                </div>
+            </div>
+            
+            <div class="col-2">Cantidad
+                <br>
+                <div *ngFor="let cantidad of cantidades">
+                    <ul>{{cantidad}}</ul>
+                </div>
+            </div>
+
+            <div class="col-2">PRECIO TOTAL
+                <br>
+                <div *ngFor="let total of totales">
+                    <ul>{{total}}</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
